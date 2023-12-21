@@ -1,0 +1,111 @@
+[gd_scene load_steps=8 format=3 uid="uid://dl6e60rbs703q"]
+
+[ext_resource type="Texture2D" uid="uid://dkb8vm47lnmhu" path="res://Sunny-land-assets-files/PNG/environment/layers/back.png" id="1_f5plk"]
+[ext_resource type="PackedScene" uid="uid://dbjghsao74xbm" path="res://player/player.tscn" id="1_petgu"]
+[ext_resource type="PackedScene" uid="uid://cwjf0x6wh4vgt" path="res://frog.tscn" id="3_362qk"]
+[ext_resource type="Texture2D" uid="uid://drpoalblyo5dm" path="res://sunny-land/assets/environment/kisspng-pixel-art-game-sprite-8-bit-5ac8e6a39a3988.2271322315231156836317.png" id="4_h44df"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sj0rr"]
+size = Vector2(2733, 374)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bohrm"]
+size = Vector2(2790.25, 374)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_om85u"]
+size = Vector2(497, 270)
+
+[node name="world" type="Node2D"]
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(-1, 314)
+scale = Vector2(7.10677, 2.9375)
+texture = ExtResource("1_f5plk")
+
+[node name="Back" type="Sprite2D" parent="Back"]
+position = Vector2(387.94, -0.340393)
+scale = Vector2(1.0239, 1.04785)
+texture = ExtResource("1_f5plk")
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_petgu")]
+position = Vector2(26, 343)
+scale = Vector2(9.52617, 9.52617)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-5.5, 585)
+shape = SubResource("RectangleShape2D_sj0rr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(2756, 585)
+shape = SubResource("RectangleShape2D_bohrm")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -1376.0
+offset_top = 395.0
+offset_right = 1358.0
+offset_bottom = 774.0
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 2741.0
+offset_top = 4.0
+offset_right = 5475.0
+offset_bottom = 383.0
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836317" type="Sprite2D" parent="."]
+position = Vector2(-1109, 444)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836318" type="Sprite2D" parent="."]
+position = Vector2(382, 446)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836319" type="Sprite2D" parent="."]
+position = Vector2(-114, 446)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836320" type="Sprite2D" parent="."]
+position = Vector2(-613, 446)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321" type="Sprite2D" parent="."]
+position = Vector2(881, 446)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836317" type="Sprite2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321"]
+position = Vector2(987, 2)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836318" type="Sprite2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321"]
+position = Vector2(2462, -7)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836319" type="Sprite2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321"]
+position = Vector2(1978, -30)
+texture = ExtResource("4_h44df")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321/Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836319"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321/Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836319/StaticBody2D"]
+position = Vector2(-4, 80)
+shape = SubResource("RectangleShape2D_om85u")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836320" type="Sprite2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321"]
+position = Vector2(1485, 7)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321" type="Sprite2D" parent="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836321"]
+position = Vector2(2959, -6)
+texture = ExtResource("4_h44df")
+
+[node name="Kisspng-pixel-art-game-sprite-8-bit-5Ac8e6a39a3988_2271322315231156836322" type="Sprite2D" parent="."]
+position = Vector2(1379, 446)
+texture = ExtResource("4_h44df")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("3_362qk")]
+position = Vector2(343, 353)
+scale = Vector2(4, 4)

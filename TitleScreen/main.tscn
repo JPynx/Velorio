@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://bay1yvm0aikyo"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_b8lrm"]
+[ext_resource type="Texture2D" uid="uid://c5cyx6m1c3e6i" path="res://sunny-land/assets/environment/back.png" id="2_e6hxw"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_b8lrm")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(580, 320.5)
+scale = Vector2(3.01042, 2.70417)
+texture = ExtResource("2_e6hxw")
+
+[node name="play" type="Button" parent="."]
+offset_left = 383.0
+offset_top = 260.0
+offset_right = 800.0
+offset_bottom = 418.0
+text = "Play"
+
+[node name="exit" type="Button" parent="."]
+offset_left = 380.0
+offset_top = 458.0
+offset_right = 800.0
+offset_bottom = 616.0
+text = "Exit"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 550.0
+offset_top = 125.0
+offset_right = 638.0
+offset_bottom = 167.0
+text = "Velorio"
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
