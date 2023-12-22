@@ -5,7 +5,7 @@ Velorio is about a guy named Velorio, who had a tragic and sudden death but unfo
 
 As of right now there's 4 main "events" as Godot calls it.
 
-(Pictures are included in each individual folder)
+(Pictures are included in the Pictures folder)
 
 Main, World, Player, and Frog
 
@@ -16,3 +16,10 @@ World has, well, the world, it has grass and a sky and collision boxes for the g
 Player has all the code for the main player that allows you to control the player and has the main sprite for the character
 
 Frog has that forbidden frog that will not detect the player but has some code linked to it and the asset that is a placeholder for an actual enemy sprite that I will make later.
+
+To Open:
+
+You first have to download Godot which you can do at the link below:
+https://godotengine.org
+
+Then you can download the GitHub link and open the project.godot file using Godot and it should have everything.
